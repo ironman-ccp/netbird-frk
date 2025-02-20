@@ -35,4 +35,5 @@ type IWGIface interface {
 	GetDevice() *device.FilteredDevice
 	GetWGDevice() *wgdevice.Device
 	GetStats(peerKey string) (configurer.WGStats, error)
+	Transfers() (map[wgtypes.Key]configurer.WGStats, error)
 }
